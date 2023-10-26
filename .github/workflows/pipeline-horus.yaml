@@ -18,5 +18,7 @@ jobs:
       - name: "Docker Imagen"
         run: docker images
         
-      - name: "Dockerfile"
-        run:  docker image build -t dfile .
+      - name: Dockerfile
+        run:  |
+          docker build -t prueba .
+          docker image ls
