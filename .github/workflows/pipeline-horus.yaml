@@ -1,4 +1,4 @@
-name: Horus
+name: Docker
  
 on:
   push:
@@ -9,12 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: "Obteniendo última versión del código"
-        uses: actions/checkout@v2
- 
- 
-      - name: "Instalar Horus"
-        run: curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | bash -s latest-beta
- 
-      - name: "Iniciar Horus"
-        run: horusec start -p="./" --return-error -e="false"
+      - name: "Creando"
+        run: docker pull php:7.0-apache
+  
+      - name: "Docker Imagen"
+        run: docker images
