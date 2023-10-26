@@ -16,5 +16,4 @@ jobs:
         run: docker images
         
       - name: "Dockerfile"
-        run:  docker build -t dfile /var/lib/docker/tmp/buildkit-mount315370548/Dockerfile
-      
+        run:  docker image build -t dfile .
