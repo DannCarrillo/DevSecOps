@@ -16,5 +16,5 @@ jobs:
         run: docker images
         
       - name: "Dockerfile"
-        run: docker build -t dfile /home/kali/lab-DSO/Dockerfile
+        run: docker build -t dfile .
       
