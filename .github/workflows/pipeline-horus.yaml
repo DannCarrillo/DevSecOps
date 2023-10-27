@@ -51,4 +51,4 @@ jobs:
       - name: Build and run Docker containers
         run: |
           docker build -t prueba .
-          docker image ls
+          docker images
