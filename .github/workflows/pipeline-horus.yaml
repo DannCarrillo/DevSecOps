@@ -52,6 +52,8 @@ jobs:
         run: |
           docker build -t prueba .
           docker images
-          docker run -d -p 80:8080 --name webgoat -v "$PWD:/var/www/html prueba
-          curl http://localhost:8080 
+          docker run -d -p 127.0.0.1:8080:8080 --name webgoat -v "$PWD:/var/www/html prueba
+          curl http://localhost:8080/WebGoat/login
+          docker container stop webgoat
+          docker container rm webgoat
           
