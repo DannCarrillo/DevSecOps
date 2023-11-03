@@ -40,5 +40,5 @@ jobs:
       - name: Carga imagen a ECR
         run: |
           aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/a5e9s9c6
-          docker tag prueba:latest public.ecr.aws/a5e9s9c6/prueba:latest
-          docker push public.ecr.aws/a5e9s9c6/prueba:latest
+          docker tag prueba:latest public.ecr.aws/a5e9s9c6/daniel_repo:latest
+          docker push public.ecr.aws/a5e9s9c6/daniel_repo:latest
