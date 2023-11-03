@@ -42,3 +42,37 @@ jobs:
           aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/a5e9s9c6
           docker tag prueba:latest public.ecr.aws/a5e9s9c6/daniel_repo:latest
           docker push public.ecr.aws/a5e9s9c6/daniel_repo:latest
+
+      - name: Descarga de terraform
+        run: |
+          cd terraform/
+          terraform init
+          terraform validate
+          terraform plan -out tfplan 
+          terraform apply tfplan >> results_tfplan.txt
+          ipp=$(cat results_tfplan.txt | grep My_ip | xargs | cut -d '=' -f 2)
+          sed -i "s/IP/$ipp/g" ../ansible/inventario
+         # terraform plan -destroy -out tfplan
+
+      - name: Ansible
+        env: 
+          PRIVATE_KEY: ${{ secrets.CLAVES_CHAMBA }}
+        run: |
+          sudo apt update
+          sudo apt install ansible -y
+          pip3 install "ansible-lint"
+          cd ansible/
+          echo "$PROVATE_KEY" >> $HOME/claves_chamba.pem
+          sudo chmod 600 $HOME/claves_chamba.pem
+          export ANSIBLE_HOST_KEY_CHEKING=False
+          ansible-playbook -i inventario server.yaml --become --private-key $HOME/claves_chamba.pem
+        continue-on-error: true
+
+
+      - name: Parado y eliminando contenedor
+        run: |
+          cd terraform
+          terraform plan -destroy -out tfplan
+          terraform apply tfplan
+          docker container stop webgoat
+          docker container rm webgoat
