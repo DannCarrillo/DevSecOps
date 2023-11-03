@@ -75,10 +75,10 @@ jobs:
           ipp=$( terraform -chdir=../terraform/ output | grep My_ip | xargs | cut -d '=' -f 2
           ./arachni-1.6.1.3-0.6.1.1/bin/arachni --check=* http://ipp:8080/WebGoat/login
 
-      - name: Parado y eliminando contenedorr
-        run: |
-          cd terraform
-          terraform plan -destroy -out tfplan
-          terraform apply tfplan
-          docker container stop webgoat
-          docker container rm webgoat
+      #- name: Parado y eliminando contenedorr
+      #  run: |
+      #    cd terraform
+      #    terraform plan -destroy -out tfplan
+      #    terraform apply tfplan
+      #    docker container stop webgoat
+      #    docker container rm webgoat
