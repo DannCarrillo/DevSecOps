@@ -74,7 +74,6 @@ jobs:
           echo "$PROVATE_KEY" >> $HOME/claves_chamba.pem
           sudo chmod 600 $HOME/claves_chamba.pem
           export ANSIBLE_HOST_KEY_CHEKING=False
-          echo $ipp
           ansible-playbook -i inventario server.yaml --become --private-key $HOME/claves_chamba.pem
           echo "Up serverr"
           sleep 55
