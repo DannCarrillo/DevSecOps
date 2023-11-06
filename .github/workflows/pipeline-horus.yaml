@@ -43,22 +43,23 @@ jobs:
           docker tag prueba:latest public.ecr.aws/a5e9s9c6/daniel_repo:latest
           docker push public.ecr.aws/a5e9s9c6/daniel_repo:latest
 
-      - name: Descarga checkov
-        run: pip3 install checkov
-
-
       - name: Descarga de terraform
         run: |
           cd terraform/
           terraform init
           terraform validate
           terraform plan -out tfplan
-          terraform show -json tfplan | jq > tfplan.json
-          checkov -f tfplan.json 
           terraform apply tfplan >> results_tfplan.txt
           ipp=$(cat results_tfplan.txt | grep My_ip | xargs | cut -d '=' -f 2)
           sed -i "s/IP/$ipp/g" ../ansible/inventario
          # terraform plan -destroy -out tfplan
+
+      - name: Descarga checkov
+        run: |
+        cd terraform/
+        pip3 install checkov
+        terraform show -json tfplan | jq > tfplan.json
+        checkov -f tfplan.json 
 
       - name: Ansible
         env: 
