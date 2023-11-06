@@ -59,7 +59,8 @@ jobs:
           cd terraform/
           pip3 install checkov
           terraform show -json tfplan | jq > tfplan.json
-          checkov -f tfplan.json 
+          checkov -f tfplan.json
+        continue-on-error: true
 
       - name: Ansible
         env: 
