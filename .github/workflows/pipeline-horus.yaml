@@ -75,7 +75,7 @@ jobs:
           export ANSIBLE_HOST_KEY_CHEKING=False
           ansible-playbook -i inventario server.yaml --become --private-key $HOME/claves_chamba.pem
           echo "Up server"
-          sleep 45
+          sleep 55
         continue-on-error: true
 
       - name: Arachni Descarga
