@@ -87,7 +87,6 @@ jobs:
         run: |
           ipp=$(cat terraform/results_tfplan.txt | grep My_ip | xargs | cut -d '=' -f 2)
           echo $ipp
-        # curl http://$ipp:8080/WebGoat/login
           ./arachni-1.6.1.3-0.6.1.1/bin/arachni --check=* http://$ipp:8080/WebGoat/login
         continue-on-error: true
 
