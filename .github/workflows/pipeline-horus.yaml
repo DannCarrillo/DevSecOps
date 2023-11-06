@@ -51,6 +51,7 @@ jobs:
           terraform plan -out tfplan
           terraform apply tfplan >> results_tfplan.txt
           ipp=$(cat results_tfplan.txt | grep My_ip | xargs | cut -d '=' -f 2)
+          echo $ipp
           sed -i "s/IP/$ipp/g" ../ansible/inventario
          # terraform plan -destroy -out tfplan
 
@@ -73,6 +74,7 @@ jobs:
           echo "$PROVATE_KEY" >> $HOME/claves_chamba.pem
           sudo chmod 600 $HOME/claves_chamba.pem
           export ANSIBLE_HOST_KEY_CHEKING=False
+          echo $ipp
           ansible-playbook -i inventario server.yaml --become --private-key $HOME/claves_chamba.pem
           echo "Up server"
           sleep 55
