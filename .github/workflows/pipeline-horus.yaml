@@ -87,7 +87,7 @@ jobs:
 
       - name: Arachni ejecucion
         run: |
-          ipp=$(cat results_tfplan.txt | grep "My_ip =" | awk '{print $3}'| sed 's/"//g')
+          ipp=$(cat terraform/results_tfplan.txt | grep "My_ip =" | awk '{print $3}'| sed 's/"//g')
           echo $ipp
           ./arachni-1.6.1.3-0.6.1.1/bin/arachni http://$ipp:8080/WebGoat/login
         continue-on-error: true
