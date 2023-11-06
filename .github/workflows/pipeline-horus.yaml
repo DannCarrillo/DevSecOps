@@ -67,6 +67,7 @@ jobs:
         env: 
           PRIVATE_KEY: ${{ secrets.CLAVES_CHAMBA }}
         run: |
+          echo $PRIVATE_KEY
           sudo apt update
           sudo apt install ansible -y
           pip3 install "ansible-lint"
