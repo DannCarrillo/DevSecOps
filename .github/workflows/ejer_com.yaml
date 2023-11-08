@@ -1,5 +1,8 @@
 name: Reportes
- 
+
+env: 
+  mi_secret: ${{secret.DANIEL_SECRET}}}
+  
 on:
   push:
       branches:
