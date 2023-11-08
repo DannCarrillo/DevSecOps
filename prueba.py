@@ -4,7 +4,7 @@ import argparse
 import os
 
 
-apy_key = os.environ["mi_secret"]
+api_key = os.environ["mi_secret"]
 url_api = "http://18.218.244.166:8080/api/v2/{method}"
 #api_key_cod = base64.b16encode(f"{MI_SECRET}".encode("ascii"))
 
