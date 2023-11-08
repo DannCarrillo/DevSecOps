@@ -1,0 +1,1018 @@
+2023-11-07T13:08:02.856-0500	[34mINFO[0m	Need to update DB
+2023-11-07T13:08:02.856-0500	[34mINFO[0m	Downloading DB...
+2023-11-07T13:09:13.512-0500	[34mINFO[0m	Detected OS: ubuntu
+2023-11-07T13:09:13.513-0500	[34mINFO[0m	Detecting Ubuntu vulnerabilities...
+2023-11-07T13:09:13.519-0500	[34mINFO[0m	Number of PL dependency files: 2
+2023-11-07T13:09:13.519-0500	[34mINFO[0m	Detecting jar vulnerabilities...
+
+prueba (ubuntu 20.04)
+=====================
+Total: 181 (UNKNOWN: 0, LOW: 70, MEDIUM: 109, HIGH: 2, CRITICAL: 0)
+
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+|          LIBRARY          | VULNERABILITY ID | SEVERITY |    INSTALLED VERSION     |      FIXED VERSION       |                  TITLE                  |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| binutils                  | CVE-2022-38533   | MEDIUM   | 2.34-6ubuntu1.3          | 2.34-6ubuntu1.4          | binutils: heap-based buffer overflow    |
+|                           |                  |          |                          |                          | in bfd_getl32() when called by          |
+|                           |                  |          |                          |                          | strip_main() in objcopy.c...            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-38533   |
++                           +------------------+----------+                          +--------------------------+-----------------------------------------+
+|                           | CVE-2017-13716   | LOW      |                          |                          | binutils: Memory leak with the C++      |
+|                           |                  |          |                          |                          | symbol demangler routine in libiberty   |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2017-13716   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2018-20657   |          |                          |                          | libiberty: Memory leak in               |
+|                           |                  |          |                          |                          | demangle_template function              |
+|                           |                  |          |                          |                          | resulting in a denial of service...     |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2018-20657   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2019-1010204 |          |                          |                          | binutils: Improper Input Validation,    |
+|                           |                  |          |                          |                          | Signed/Unsigned Comparison,             |
+|                           |                  |          |                          |                          | Out-of-bounds Read in gold/fileread.cc  |
+|                           |                  |          |                          |                          | and elfcpp/elfcpp_file.h...             |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2019-1010204 |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-45078   |          |                          |                          | binutils: out-of-bounds write in        |
+|                           |                  |          |                          |                          | stab_xcoff_builtin_type() in stabs.c    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-45078   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-46195   |          |                          |                          | gcc: uncontrolled recursion             |
+|                           |                  |          |                          |                          | in libiberty/rust-demangle.c            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-46195   |
++---------------------------+------------------+----------+                          +--------------------------+-----------------------------------------+
+| binutils-common           | CVE-2022-38533   | MEDIUM   |                          | 2.34-6ubuntu1.4          | binutils: heap-based buffer overflow    |
+|                           |                  |          |                          |                          | in bfd_getl32() when called by          |
+|                           |                  |          |                          |                          | strip_main() in objcopy.c...            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-38533   |
++                           +------------------+----------+                          +--------------------------+-----------------------------------------+
+|                           | CVE-2017-13716   | LOW      |                          |                          | binutils: Memory leak with the C++      |
+|                           |                  |          |                          |                          | symbol demangler routine in libiberty   |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2017-13716   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2018-20657   |          |                          |                          | libiberty: Memory leak in               |
+|                           |                  |          |                          |                          | demangle_template function              |
+|                           |                  |          |                          |                          | resulting in a denial of service...     |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2018-20657   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2019-1010204 |          |                          |                          | binutils: Improper Input Validation,    |
+|                           |                  |          |                          |                          | Signed/Unsigned Comparison,             |
+|                           |                  |          |                          |                          | Out-of-bounds Read in gold/fileread.cc  |
+|                           |                  |          |                          |                          | and elfcpp/elfcpp_file.h...             |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2019-1010204 |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-45078   |          |                          |                          | binutils: out-of-bounds write in        |
+|                           |                  |          |                          |                          | stab_xcoff_builtin_type() in stabs.c    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-45078   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-46195   |          |                          |                          | gcc: uncontrolled recursion             |
+|                           |                  |          |                          |                          | in libiberty/rust-demangle.c            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-46195   |
++---------------------------+------------------+----------+                          +--------------------------+-----------------------------------------+
+| binutils-x86-64-linux-gnu | CVE-2022-38533   | MEDIUM   |                          | 2.34-6ubuntu1.4          | binutils: heap-based buffer overflow    |
+|                           |                  |          |                          |                          | in bfd_getl32() when called by          |
+|                           |                  |          |                          |                          | strip_main() in objcopy.c...            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-38533   |
++                           +------------------+----------+                          +--------------------------+-----------------------------------------+
+|                           | CVE-2017-13716   | LOW      |                          |                          | binutils: Memory leak with the C++      |
+|                           |                  |          |                          |                          | symbol demangler routine in libiberty   |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2017-13716   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2018-20657   |          |                          |                          | libiberty: Memory leak in               |
+|                           |                  |          |                          |                          | demangle_template function              |
+|                           |                  |          |                          |                          | resulting in a denial of service...     |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2018-20657   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2019-1010204 |          |                          |                          | binutils: Improper Input Validation,    |
+|                           |                  |          |                          |                          | Signed/Unsigned Comparison,             |
+|                           |                  |          |                          |                          | Out-of-bounds Read in gold/fileread.cc  |
+|                           |                  |          |                          |                          | and elfcpp/elfcpp_file.h...             |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2019-1010204 |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-45078   |          |                          |                          | binutils: out-of-bounds write in        |
+|                           |                  |          |                          |                          | stab_xcoff_builtin_type() in stabs.c    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-45078   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-46195   |          |                          |                          | gcc: uncontrolled recursion             |
+|                           |                  |          |                          |                          | in libiberty/rust-demangle.c            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-46195   |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| ca-certificates           | CVE-2022-23491   | MEDIUM   | 20210119~20.04.2         | 20211016ubuntu0.20.04.1  | Powermolecli 1.0.10 updates             |
+|                           |                  |          |                          |                          | its dependency 'certifi' to             |
+|                           |                  |          |                          |                          | v2022.12.7 to include a security...     |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-23491   |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| coreutils                 | CVE-2016-2781    | LOW      | 8.30-3ubuntu2            |                          | coreutils: Non-privileged               |
+|                           |                  |          |                          |                          | session can escape to the               |
+|                           |                  |          |                          |                          | parent session in chroot                |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2016-2781    |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| curl                      | CVE-2022-32206   | MEDIUM   | 7.68.0-1ubuntu2.11       | 7.68.0-1ubuntu2.12       | curl: HTTP compression                  |
+|                           |                  |          |                          |                          | denial of service                       |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-32206   |
++                           +------------------+          +                          +                          +-----------------------------------------+
+|                           | CVE-2022-32208   |          |                          |                          | curl: FTP-KRB bad                       |
+|                           |                  |          |                          |                          | message verification                    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-32208   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-32221   |          |                          | 7.68.0-1ubuntu2.14       | curl: POST following PUT confusion      |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-32221   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-43552   |          |                          | 7.68.0-1ubuntu2.15       | curl: Use-after-free triggered          |
+|                           |                  |          |                          |                          | by an HTTP proxy deny response          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-43552   |
++                           +------------------+----------+                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-35252   | LOW      |                          | 7.68.0-1ubuntu2.13       | curl: Incorrect handling of             |
+|                           |                  |          |                          |                          | control code characters in cookies      |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-35252   |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| e2fsprogs                 | CVE-2022-1304    | MEDIUM   | 1.45.5-2ubuntu1          | 1.45.5-2ubuntu1.1        | e2fsprogs: out-of-bounds                |
+|                           |                  |          |                          |                          | read/write via crafted filesystem       |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-1304    |
++---------------------------+------------------+          +--------------------------+--------------------------+-----------------------------------------+
+| gpgv                      | CVE-2022-34903   |          | 2.2.19-3ubuntu2.1        | 2.2.19-3ubuntu2.2        | gpg: Signature spoofing                 |
+|                           |                  |          |                          |                          | via status line injection               |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-34903   |
++                           +------------------+----------+                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-3219    | LOW      |                          |                          | gnupg: denial of service                |
+|                           |                  |          |                          |                          | issue (resource consumption)            |
+|                           |                  |          |                          |                          | using compressed packets                |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3219    |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| libasn1-8-heimdal         | CVE-2021-44758   | MEDIUM   | 7.7.0+dfsg-1ubuntu1      | 7.7.0+dfsg-1ubuntu1.3    | Heimdal before 7.7.1 allows             |
+|                           |                  |          |                          |                          | attackers to cause a NULL               |
+|                           |                  |          |                          |                          | pointer dereference in...               |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-44758   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-3116    |          |                          | 7.7.0+dfsg-1ubuntu1.1    | A flawed logical condition in           |
+|                           |                  |          |                          |                          | lib/gssapi/spnego/accept_sec_context.c  |
+|                           |                  |          |                          |                          | allows a malicious                      |
+|                           |                  |          |                          |                          | actor to remotely...                    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3116    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-3437    |          |                          | 7.7.0+dfsg-1ubuntu1.3    | samba: heap buffer overflow             |
+|                           |                  |          |                          |                          | in GSSAPI unwrap_des() and              |
+|                           |                  |          |                          |                          | unwrap_des3() routines of Heimdal...    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3437    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-41916   |          |                          | 7.7.0+dfsg-1ubuntu1.2    | Heimdal is an implementation            |
+|                           |                  |          |                          |                          | of ASN.1/DER, PKIX, and                 |
+|                           |                  |          |                          |                          | Kerberos. Versions prior to...          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-41916   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-42898   |          |                          | 7.7.0+dfsg-1ubuntu1.3    | krb5: integer overflow                  |
+|                           |                  |          |                          |                          | vulnerabilities in PAC parsing          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-42898   |
++                           +------------------+          +                          +                          +-----------------------------------------+
+|                           | CVE-2022-44640   |          |                          |                          | Heimdal before 7.7.1 allows             |
+|                           |                  |          |                          |                          | remote attackers to execute             |
+|                           |                  |          |                          |                          | arbitrary code because of...            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-44640   |
++                           +------------------+----------+                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-3671    | LOW      |                          | 7.7.0+dfsg-1ubuntu1.1    | samba: Null pointer dereference         |
+|                           |                  |          |                          |                          | on missing sname in TGS-REQ             |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-3671    |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| libbinutils               | CVE-2022-38533   | MEDIUM   | 2.34-6ubuntu1.3          | 2.34-6ubuntu1.4          | binutils: heap-based buffer overflow    |
+|                           |                  |          |                          |                          | in bfd_getl32() when called by          |
+|                           |                  |          |                          |                          | strip_main() in objcopy.c...            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-38533   |
++                           +------------------+----------+                          +--------------------------+-----------------------------------------+
+|                           | CVE-2017-13716   | LOW      |                          |                          | binutils: Memory leak with the C++      |
+|                           |                  |          |                          |                          | symbol demangler routine in libiberty   |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2017-13716   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2018-20657   |          |                          |                          | libiberty: Memory leak in               |
+|                           |                  |          |                          |                          | demangle_template function              |
+|                           |                  |          |                          |                          | resulting in a denial of service...     |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2018-20657   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2019-1010204 |          |                          |                          | binutils: Improper Input Validation,    |
+|                           |                  |          |                          |                          | Signed/Unsigned Comparison,             |
+|                           |                  |          |                          |                          | Out-of-bounds Read in gold/fileread.cc  |
+|                           |                  |          |                          |                          | and elfcpp/elfcpp_file.h...             |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2019-1010204 |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-45078   |          |                          |                          | binutils: out-of-bounds write in        |
+|                           |                  |          |                          |                          | stab_xcoff_builtin_type() in stabs.c    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-45078   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-46195   |          |                          |                          | gcc: uncontrolled recursion             |
+|                           |                  |          |                          |                          | in libiberty/rust-demangle.c            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-46195   |
++---------------------------+------------------+          +--------------------------+--------------------------+-----------------------------------------+
+| libc-bin                  | CVE-2016-20013   |          | 2.31-0ubuntu9.9          |                          | sha256crypt and sha512crypt             |
+|                           |                  |          |                          |                          | through 0.6 allow attackers             |
+|                           |                  |          |                          |                          | to cause a denial of...                 |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2016-20013   |
++---------------------------+                  +          +                          +--------------------------+                                         +
+| libc6                     |                  |          |                          |                          |                                         |
+|                           |                  |          |                          |                          |                                         |
+|                           |                  |          |                          |                          |                                         |
+|                           |                  |          |                          |                          |                                         |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| libcom-err2               | CVE-2022-1304    | MEDIUM   | 1.45.5-2ubuntu1          | 1.45.5-2ubuntu1.1        | e2fsprogs: out-of-bounds                |
+|                           |                  |          |                          |                          | read/write via crafted filesystem       |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-1304    |
++---------------------------+------------------+          +--------------------------+--------------------------+-----------------------------------------+
+| libctf-nobfd0             | CVE-2022-38533   |          | 2.34-6ubuntu1.3          | 2.34-6ubuntu1.4          | binutils: heap-based buffer overflow    |
+|                           |                  |          |                          |                          | in bfd_getl32() when called by          |
+|                           |                  |          |                          |                          | strip_main() in objcopy.c...            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-38533   |
++                           +------------------+----------+                          +--------------------------+-----------------------------------------+
+|                           | CVE-2017-13716   | LOW      |                          |                          | binutils: Memory leak with the C++      |
+|                           |                  |          |                          |                          | symbol demangler routine in libiberty   |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2017-13716   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2018-20657   |          |                          |                          | libiberty: Memory leak in               |
+|                           |                  |          |                          |                          | demangle_template function              |
+|                           |                  |          |                          |                          | resulting in a denial of service...     |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2018-20657   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2019-1010204 |          |                          |                          | binutils: Improper Input Validation,    |
+|                           |                  |          |                          |                          | Signed/Unsigned Comparison,             |
+|                           |                  |          |                          |                          | Out-of-bounds Read in gold/fileread.cc  |
+|                           |                  |          |                          |                          | and elfcpp/elfcpp_file.h...             |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2019-1010204 |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-45078   |          |                          |                          | binutils: out-of-bounds write in        |
+|                           |                  |          |                          |                          | stab_xcoff_builtin_type() in stabs.c    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-45078   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-46195   |          |                          |                          | gcc: uncontrolled recursion             |
+|                           |                  |          |                          |                          | in libiberty/rust-demangle.c            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-46195   |
++---------------------------+------------------+----------+                          +--------------------------+-----------------------------------------+
+| libctf0                   | CVE-2022-38533   | MEDIUM   |                          | 2.34-6ubuntu1.4          | binutils: heap-based buffer overflow    |
+|                           |                  |          |                          |                          | in bfd_getl32() when called by          |
+|                           |                  |          |                          |                          | strip_main() in objcopy.c...            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-38533   |
++                           +------------------+----------+                          +--------------------------+-----------------------------------------+
+|                           | CVE-2017-13716   | LOW      |                          |                          | binutils: Memory leak with the C++      |
+|                           |                  |          |                          |                          | symbol demangler routine in libiberty   |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2017-13716   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2018-20657   |          |                          |                          | libiberty: Memory leak in               |
+|                           |                  |          |                          |                          | demangle_template function              |
+|                           |                  |          |                          |                          | resulting in a denial of service...     |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2018-20657   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2019-1010204 |          |                          |                          | binutils: Improper Input Validation,    |
+|                           |                  |          |                          |                          | Signed/Unsigned Comparison,             |
+|                           |                  |          |                          |                          | Out-of-bounds Read in gold/fileread.cc  |
+|                           |                  |          |                          |                          | and elfcpp/elfcpp_file.h...             |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2019-1010204 |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-45078   |          |                          |                          | binutils: out-of-bounds write in        |
+|                           |                  |          |                          |                          | stab_xcoff_builtin_type() in stabs.c    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-45078   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-46195   |          |                          |                          | gcc: uncontrolled recursion             |
+|                           |                  |          |                          |                          | in libiberty/rust-demangle.c            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-46195   |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| libcurl4                  | CVE-2022-32206   | MEDIUM   | 7.68.0-1ubuntu2.11       | 7.68.0-1ubuntu2.12       | curl: HTTP compression                  |
+|                           |                  |          |                          |                          | denial of service                       |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-32206   |
++                           +------------------+          +                          +                          +-----------------------------------------+
+|                           | CVE-2022-32208   |          |                          |                          | curl: FTP-KRB bad                       |
+|                           |                  |          |                          |                          | message verification                    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-32208   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-32221   |          |                          | 7.68.0-1ubuntu2.14       | curl: POST following PUT confusion      |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-32221   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-43552   |          |                          | 7.68.0-1ubuntu2.15       | curl: Use-after-free triggered          |
+|                           |                  |          |                          |                          | by an HTTP proxy deny response          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-43552   |
++                           +------------------+----------+                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-35252   | LOW      |                          | 7.68.0-1ubuntu2.13       | curl: Incorrect handling of             |
+|                           |                  |          |                          |                          | control code characters in cookies      |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-35252   |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| libexpat1                 | CVE-2022-40674   | MEDIUM   | 2.2.9-1ubuntu0.4         | 2.2.9-1ubuntu0.5         | expat: a use-after-free in the          |
+|                           |                  |          |                          |                          | doContent function in xmlparse.c        |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-40674   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-43680   |          |                          | 2.2.9-1ubuntu0.6         | expat: use-after free caused            |
+|                           |                  |          |                          |                          | by overeager destruction                |
+|                           |                  |          |                          |                          | of a shared DTD in...                   |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-43680   |
++---------------------------+------------------+          +--------------------------+--------------------------+-----------------------------------------+
+| libext2fs2                | CVE-2022-1304    |          | 1.45.5-2ubuntu1          | 1.45.5-2ubuntu1.1        | e2fsprogs: out-of-bounds                |
+|                           |                  |          |                          |                          | read/write via crafted filesystem       |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-1304    |
++---------------------------+------------------+          +--------------------------+--------------------------+-----------------------------------------+
+| libfreetype6              | CVE-2022-27404   |          | 2.10.1-2ubuntu0.1        | 2.10.1-2ubuntu0.2        | FreeType: Buffer overflow               |
+|                           |                  |          |                          |                          | in sfnt_init_face                       |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-27404   |
++                           +------------------+          +                          +                          +-----------------------------------------+
+|                           | CVE-2022-31782   |          |                          |                          | ftbench.c in FreeType Demo              |
+|                           |                  |          |                          |                          | Programs through 2.12.1 has a           |
+|                           |                  |          |                          |                          | heap-based buffer overflow....          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-31782   |
++                           +------------------+----------+                          +                          +-----------------------------------------+
+|                           | CVE-2022-27405   | LOW      |                          |                          | FreeType: Segmentation                  |
+|                           |                  |          |                          |                          | violation via FNT_Size_Request          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-27405   |
++                           +------------------+          +                          +                          +-----------------------------------------+
+|                           | CVE-2022-27406   |          |                          |                          | Freetype: Segmentation                  |
+|                           |                  |          |                          |                          | violation via FT_Request_Size           |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-27406   |
++---------------------------+------------------+          +--------------------------+--------------------------+-----------------------------------------+
+| libgmp10                  | CVE-2021-43618   |          | 2:6.2.0+dfsg-4           | 2:6.2.0+dfsg-4ubuntu0.1  | gmp: Integer overflow and resultant     |
+|                           |                  |          |                          |                          | buffer overflow via crafted input       |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-43618   |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| libgnutls30               | CVE-2022-2509    | MEDIUM   | 3.6.13-2ubuntu1.6        | 3.6.13-2ubuntu1.7        | gnutls: Double free                     |
+|                           |                  |          |                          |                          | during gnutls_pkcs7_verify              |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-2509    |
++                           +------------------+----------+                          +                          +-----------------------------------------+
+|                           | CVE-2021-4209    | LOW      |                          |                          | GnuTLS: Null pointer                    |
+|                           |                  |          |                          |                          | dereference in MD_UPDATE                |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-4209    |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| libgssapi-krb5-2          | CVE-2021-36222   | MEDIUM   | 1.17-6ubuntu4.1          |                          | krb5: Sending a request containing      |
+|                           |                  |          |                          |                          | PA-ENCRYPTED-CHALLENGE padata           |
+|                           |                  |          |                          |                          | element without using FAST could...     |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-36222   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-37750   |          |                          |                          | krb5: NULL pointer dereference          |
+|                           |                  |          |                          |                          | in process_tgs_req() in                 |
+|                           |                  |          |                          |                          | kdc/do_tgs_req.c via a FAST inner...    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-37750   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-42898   |          |                          | 1.17-6ubuntu4.2          | krb5: integer overflow                  |
+|                           |                  |          |                          |                          | vulnerabilities in PAC parsing          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-42898   |
++---------------------------+------------------+          +--------------------------+--------------------------+-----------------------------------------+
+| libgssapi3-heimdal        | CVE-2021-44758   |          | 7.7.0+dfsg-1ubuntu1      | 7.7.0+dfsg-1ubuntu1.3    | Heimdal before 7.7.1 allows             |
+|                           |                  |          |                          |                          | attackers to cause a NULL               |
+|                           |                  |          |                          |                          | pointer dereference in...               |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-44758   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-3116    |          |                          | 7.7.0+dfsg-1ubuntu1.1    | A flawed logical condition in           |
+|                           |                  |          |                          |                          | lib/gssapi/spnego/accept_sec_context.c  |
+|                           |                  |          |                          |                          | allows a malicious                      |
+|                           |                  |          |                          |                          | actor to remotely...                    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3116    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-3437    |          |                          | 7.7.0+dfsg-1ubuntu1.3    | samba: heap buffer overflow             |
+|                           |                  |          |                          |                          | in GSSAPI unwrap_des() and              |
+|                           |                  |          |                          |                          | unwrap_des3() routines of Heimdal...    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3437    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-41916   |          |                          | 7.7.0+dfsg-1ubuntu1.2    | Heimdal is an implementation            |
+|                           |                  |          |                          |                          | of ASN.1/DER, PKIX, and                 |
+|                           |                  |          |                          |                          | Kerberos. Versions prior to...          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-41916   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-42898   |          |                          | 7.7.0+dfsg-1ubuntu1.3    | krb5: integer overflow                  |
+|                           |                  |          |                          |                          | vulnerabilities in PAC parsing          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-42898   |
++                           +------------------+          +                          +                          +-----------------------------------------+
+|                           | CVE-2022-44640   |          |                          |                          | Heimdal before 7.7.1 allows             |
+|                           |                  |          |                          |                          | remote attackers to execute             |
+|                           |                  |          |                          |                          | arbitrary code because of...            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-44640   |
++                           +------------------+----------+                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-3671    | LOW      |                          | 7.7.0+dfsg-1ubuntu1.1    | samba: Null pointer dereference         |
+|                           |                  |          |                          |                          | on missing sname in TGS-REQ             |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-3671    |
++---------------------------+------------------+----------+                          +--------------------------+-----------------------------------------+
+| libhcrypto4-heimdal       | CVE-2021-44758   | MEDIUM   |                          | 7.7.0+dfsg-1ubuntu1.3    | Heimdal before 7.7.1 allows             |
+|                           |                  |          |                          |                          | attackers to cause a NULL               |
+|                           |                  |          |                          |                          | pointer dereference in...               |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-44758   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-3116    |          |                          | 7.7.0+dfsg-1ubuntu1.1    | A flawed logical condition in           |
+|                           |                  |          |                          |                          | lib/gssapi/spnego/accept_sec_context.c  |
+|                           |                  |          |                          |                          | allows a malicious                      |
+|                           |                  |          |                          |                          | actor to remotely...                    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3116    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-3437    |          |                          | 7.7.0+dfsg-1ubuntu1.3    | samba: heap buffer overflow             |
+|                           |                  |          |                          |                          | in GSSAPI unwrap_des() and              |
+|                           |                  |          |                          |                          | unwrap_des3() routines of Heimdal...    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3437    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-41916   |          |                          | 7.7.0+dfsg-1ubuntu1.2    | Heimdal is an implementation            |
+|                           |                  |          |                          |                          | of ASN.1/DER, PKIX, and                 |
+|                           |                  |          |                          |                          | Kerberos. Versions prior to...          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-41916   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-42898   |          |                          | 7.7.0+dfsg-1ubuntu1.3    | krb5: integer overflow                  |
+|                           |                  |          |                          |                          | vulnerabilities in PAC parsing          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-42898   |
++                           +------------------+          +                          +                          +-----------------------------------------+
+|                           | CVE-2022-44640   |          |                          |                          | Heimdal before 7.7.1 allows             |
+|                           |                  |          |                          |                          | remote attackers to execute             |
+|                           |                  |          |                          |                          | arbitrary code because of...            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-44640   |
++                           +------------------+----------+                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-3671    | LOW      |                          | 7.7.0+dfsg-1ubuntu1.1    | samba: Null pointer dereference         |
+|                           |                  |          |                          |                          | on missing sname in TGS-REQ             |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-3671    |
++---------------------------+------------------+----------+                          +--------------------------+-----------------------------------------+
+| libheimbase1-heimdal      | CVE-2021-44758   | MEDIUM   |                          | 7.7.0+dfsg-1ubuntu1.3    | Heimdal before 7.7.1 allows             |
+|                           |                  |          |                          |                          | attackers to cause a NULL               |
+|                           |                  |          |                          |                          | pointer dereference in...               |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-44758   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-3116    |          |                          | 7.7.0+dfsg-1ubuntu1.1    | A flawed logical condition in           |
+|                           |                  |          |                          |                          | lib/gssapi/spnego/accept_sec_context.c  |
+|                           |                  |          |                          |                          | allows a malicious                      |
+|                           |                  |          |                          |                          | actor to remotely...                    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3116    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-3437    |          |                          | 7.7.0+dfsg-1ubuntu1.3    | samba: heap buffer overflow             |
+|                           |                  |          |                          |                          | in GSSAPI unwrap_des() and              |
+|                           |                  |          |                          |                          | unwrap_des3() routines of Heimdal...    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3437    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-41916   |          |                          | 7.7.0+dfsg-1ubuntu1.2    | Heimdal is an implementation            |
+|                           |                  |          |                          |                          | of ASN.1/DER, PKIX, and                 |
+|                           |                  |          |                          |                          | Kerberos. Versions prior to...          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-41916   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-42898   |          |                          | 7.7.0+dfsg-1ubuntu1.3    | krb5: integer overflow                  |
+|                           |                  |          |                          |                          | vulnerabilities in PAC parsing          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-42898   |
++                           +------------------+          +                          +                          +-----------------------------------------+
+|                           | CVE-2022-44640   |          |                          |                          | Heimdal before 7.7.1 allows             |
+|                           |                  |          |                          |                          | remote attackers to execute             |
+|                           |                  |          |                          |                          | arbitrary code because of...            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-44640   |
++                           +------------------+----------+                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-3671    | LOW      |                          | 7.7.0+dfsg-1ubuntu1.1    | samba: Null pointer dereference         |
+|                           |                  |          |                          |                          | on missing sname in TGS-REQ             |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-3671    |
++---------------------------+------------------+----------+                          +--------------------------+-----------------------------------------+
+| libheimntlm0-heimdal      | CVE-2021-44758   | MEDIUM   |                          | 7.7.0+dfsg-1ubuntu1.3    | Heimdal before 7.7.1 allows             |
+|                           |                  |          |                          |                          | attackers to cause a NULL               |
+|                           |                  |          |                          |                          | pointer dereference in...               |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-44758   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-3116    |          |                          | 7.7.0+dfsg-1ubuntu1.1    | A flawed logical condition in           |
+|                           |                  |          |                          |                          | lib/gssapi/spnego/accept_sec_context.c  |
+|                           |                  |          |                          |                          | allows a malicious                      |
+|                           |                  |          |                          |                          | actor to remotely...                    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3116    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-3437    |          |                          | 7.7.0+dfsg-1ubuntu1.3    | samba: heap buffer overflow             |
+|                           |                  |          |                          |                          | in GSSAPI unwrap_des() and              |
+|                           |                  |          |                          |                          | unwrap_des3() routines of Heimdal...    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3437    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-41916   |          |                          | 7.7.0+dfsg-1ubuntu1.2    | Heimdal is an implementation            |
+|                           |                  |          |                          |                          | of ASN.1/DER, PKIX, and                 |
+|                           |                  |          |                          |                          | Kerberos. Versions prior to...          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-41916   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-42898   |          |                          | 7.7.0+dfsg-1ubuntu1.3    | krb5: integer overflow                  |
+|                           |                  |          |                          |                          | vulnerabilities in PAC parsing          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-42898   |
++                           +------------------+          +                          +                          +-----------------------------------------+
+|                           | CVE-2022-44640   |          |                          |                          | Heimdal before 7.7.1 allows             |
+|                           |                  |          |                          |                          | remote attackers to execute             |
+|                           |                  |          |                          |                          | arbitrary code because of...            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-44640   |
++                           +------------------+----------+                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-3671    | LOW      |                          | 7.7.0+dfsg-1ubuntu1.1    | samba: Null pointer dereference         |
+|                           |                  |          |                          |                          | on missing sname in TGS-REQ             |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-3671    |
++---------------------------+------------------+----------+                          +--------------------------+-----------------------------------------+
+| libhx509-5-heimdal        | CVE-2021-44758   | MEDIUM   |                          | 7.7.0+dfsg-1ubuntu1.3    | Heimdal before 7.7.1 allows             |
+|                           |                  |          |                          |                          | attackers to cause a NULL               |
+|                           |                  |          |                          |                          | pointer dereference in...               |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-44758   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-3116    |          |                          | 7.7.0+dfsg-1ubuntu1.1    | A flawed logical condition in           |
+|                           |                  |          |                          |                          | lib/gssapi/spnego/accept_sec_context.c  |
+|                           |                  |          |                          |                          | allows a malicious                      |
+|                           |                  |          |                          |                          | actor to remotely...                    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3116    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-3437    |          |                          | 7.7.0+dfsg-1ubuntu1.3    | samba: heap buffer overflow             |
+|                           |                  |          |                          |                          | in GSSAPI unwrap_des() and              |
+|                           |                  |          |                          |                          | unwrap_des3() routines of Heimdal...    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3437    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-41916   |          |                          | 7.7.0+dfsg-1ubuntu1.2    | Heimdal is an implementation            |
+|                           |                  |          |                          |                          | of ASN.1/DER, PKIX, and                 |
+|                           |                  |          |                          |                          | Kerberos. Versions prior to...          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-41916   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-42898   |          |                          | 7.7.0+dfsg-1ubuntu1.3    | krb5: integer overflow                  |
+|                           |                  |          |                          |                          | vulnerabilities in PAC parsing          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-42898   |
++                           +------------------+          +                          +                          +-----------------------------------------+
+|                           | CVE-2022-44640   |          |                          |                          | Heimdal before 7.7.1 allows             |
+|                           |                  |          |                          |                          | remote attackers to execute             |
+|                           |                  |          |                          |                          | arbitrary code because of...            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-44640   |
++                           +------------------+----------+                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-3671    | LOW      |                          | 7.7.0+dfsg-1ubuntu1.1    | samba: Null pointer dereference         |
+|                           |                  |          |                          |                          | on missing sname in TGS-REQ             |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-3671    |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| libk5crypto3              | CVE-2021-36222   | MEDIUM   | 1.17-6ubuntu4.1          |                          | krb5: Sending a request containing      |
+|                           |                  |          |                          |                          | PA-ENCRYPTED-CHALLENGE padata           |
+|                           |                  |          |                          |                          | element without using FAST could...     |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-36222   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-37750   |          |                          |                          | krb5: NULL pointer dereference          |
+|                           |                  |          |                          |                          | in process_tgs_req() in                 |
+|                           |                  |          |                          |                          | kdc/do_tgs_req.c via a FAST inner...    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-37750   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-42898   |          |                          | 1.17-6ubuntu4.2          | krb5: integer overflow                  |
+|                           |                  |          |                          |                          | vulnerabilities in PAC parsing          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-42898   |
++---------------------------+------------------+          +--------------------------+--------------------------+-----------------------------------------+
+| libkrb5-26-heimdal        | CVE-2021-44758   |          | 7.7.0+dfsg-1ubuntu1      | 7.7.0+dfsg-1ubuntu1.3    | Heimdal before 7.7.1 allows             |
+|                           |                  |          |                          |                          | attackers to cause a NULL               |
+|                           |                  |          |                          |                          | pointer dereference in...               |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-44758   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-3116    |          |                          | 7.7.0+dfsg-1ubuntu1.1    | A flawed logical condition in           |
+|                           |                  |          |                          |                          | lib/gssapi/spnego/accept_sec_context.c  |
+|                           |                  |          |                          |                          | allows a malicious                      |
+|                           |                  |          |                          |                          | actor to remotely...                    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3116    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-3437    |          |                          | 7.7.0+dfsg-1ubuntu1.3    | samba: heap buffer overflow             |
+|                           |                  |          |                          |                          | in GSSAPI unwrap_des() and              |
+|                           |                  |          |                          |                          | unwrap_des3() routines of Heimdal...    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3437    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-41916   |          |                          | 7.7.0+dfsg-1ubuntu1.2    | Heimdal is an implementation            |
+|                           |                  |          |                          |                          | of ASN.1/DER, PKIX, and                 |
+|                           |                  |          |                          |                          | Kerberos. Versions prior to...          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-41916   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-42898   |          |                          | 7.7.0+dfsg-1ubuntu1.3    | krb5: integer overflow                  |
+|                           |                  |          |                          |                          | vulnerabilities in PAC parsing          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-42898   |
++                           +------------------+          +                          +                          +-----------------------------------------+
+|                           | CVE-2022-44640   |          |                          |                          | Heimdal before 7.7.1 allows             |
+|                           |                  |          |                          |                          | remote attackers to execute             |
+|                           |                  |          |                          |                          | arbitrary code because of...            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-44640   |
++                           +------------------+----------+                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-3671    | LOW      |                          | 7.7.0+dfsg-1ubuntu1.1    | samba: Null pointer dereference         |
+|                           |                  |          |                          |                          | on missing sname in TGS-REQ             |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-3671    |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| libkrb5-3                 | CVE-2021-36222   | MEDIUM   | 1.17-6ubuntu4.1          |                          | krb5: Sending a request containing      |
+|                           |                  |          |                          |                          | PA-ENCRYPTED-CHALLENGE padata           |
+|                           |                  |          |                          |                          | element without using FAST could...     |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-36222   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-37750   |          |                          |                          | krb5: NULL pointer dereference          |
+|                           |                  |          |                          |                          | in process_tgs_req() in                 |
+|                           |                  |          |                          |                          | kdc/do_tgs_req.c via a FAST inner...    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-37750   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-42898   |          |                          | 1.17-6ubuntu4.2          | krb5: integer overflow                  |
+|                           |                  |          |                          |                          | vulnerabilities in PAC parsing          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-42898   |
++---------------------------+------------------+          +                          +--------------------------+-----------------------------------------+
+| libkrb5support0           | CVE-2021-36222   |          |                          |                          | krb5: Sending a request containing      |
+|                           |                  |          |                          |                          | PA-ENCRYPTED-CHALLENGE padata           |
+|                           |                  |          |                          |                          | element without using FAST could...     |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-36222   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-37750   |          |                          |                          | krb5: NULL pointer dereference          |
+|                           |                  |          |                          |                          | in process_tgs_req() in                 |
+|                           |                  |          |                          |                          | kdc/do_tgs_req.c via a FAST inner...    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-37750   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-42898   |          |                          | 1.17-6ubuntu4.2          | krb5: integer overflow                  |
+|                           |                  |          |                          |                          | vulnerabilities in PAC parsing          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-42898   |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| libncurses6               | CVE-2021-39537   | LOW      | 6.2-0ubuntu2             |                          | ncurses: heap-based buffer overflow     |
+|                           |                  |          |                          |                          | in _nc_captoinfo() in captoinfo.c       |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-39537   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-29458   |          |                          |                          | ncurses: segfaulting OOB read           |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-29458   |
++---------------------------+------------------+          +                          +--------------------------+-----------------------------------------+
+| libncursesw6              | CVE-2021-39537   |          |                          |                          | ncurses: heap-based buffer overflow     |
+|                           |                  |          |                          |                          | in _nc_captoinfo() in captoinfo.c       |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-39537   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-29458   |          |                          |                          | ncurses: segfaulting OOB read           |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-29458   |
++---------------------------+------------------+          +--------------------------+--------------------------+-----------------------------------------+
+| libpam-modules            | CVE-2022-28321   |          | 1.3.1-5ubuntu4.3         | 1.3.1-5ubuntu4.4         | The Linux-PAM package before            |
+|                           |                  |          |                          |                          | 1.5.2-6.1 for openSUSE Tumbleweed       |
+|                           |                  |          |                          |                          | allows authentication bypass for...     |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-28321   |
++---------------------------+                  +          +                          +                          +                                         +
+| libpam-modules-bin        |                  |          |                          |                          |                                         |
+|                           |                  |          |                          |                          |                                         |
+|                           |                  |          |                          |                          |                                         |
+|                           |                  |          |                          |                          |                                         |
++---------------------------+                  +          +                          +                          +                                         +
+| libpam-runtime            |                  |          |                          |                          |                                         |
+|                           |                  |          |                          |                          |                                         |
+|                           |                  |          |                          |                          |                                         |
+|                           |                  |          |                          |                          |                                         |
++---------------------------+                  +          +                          +                          +                                         +
+| libpam0g                  |                  |          |                          |                          |                                         |
+|                           |                  |          |                          |                          |                                         |
+|                           |                  |          |                          |                          |                                         |
+|                           |                  |          |                          |                          |                                         |
++---------------------------+------------------+          +--------------------------+--------------------------+-----------------------------------------+
+| libpcre2-8-0              | CVE-2022-1586    |          | 10.34-7                  | 10.34-7ubuntu0.1         | pcre2: Out-of-bounds read in            |
+|                           |                  |          |                          |                          | compile_xclass_matchingpath             |
+|                           |                  |          |                          |                          | in pcre2_jit_compile.c                  |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-1586    |
++                           +------------------+          +                          +                          +-----------------------------------------+
+|                           | CVE-2022-1587    |          |                          |                          | pcre2: Out-of-bounds read               |
+|                           |                  |          |                          |                          | in get_recurse_data_length              |
+|                           |                  |          |                          |                          | in pcre2_jit_compile.c                  |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-1587    |
++---------------------------+------------------+          +--------------------------+--------------------------+-----------------------------------------+
+| libpcre3                  | CVE-2017-11164   |          | 2:8.39-12ubuntu0.1       |                          | pcre: OP_KETRMAX feature in the         |
+|                           |                  |          |                          |                          | match function in pcre_exec.c           |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2017-11164   |
++---------------------------+------------------+          +--------------------------+--------------------------+-----------------------------------------+
+| libpng16-16               | CVE-2022-3857    |          | 1.6.37-2                 |                          | libpng: Null pointer dereference        |
+|                           |                  |          |                          |                          | leads to segmentation fault             |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3857    |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| libroken18-heimdal        | CVE-2021-44758   | MEDIUM   | 7.7.0+dfsg-1ubuntu1      | 7.7.0+dfsg-1ubuntu1.3    | Heimdal before 7.7.1 allows             |
+|                           |                  |          |                          |                          | attackers to cause a NULL               |
+|                           |                  |          |                          |                          | pointer dereference in...               |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-44758   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-3116    |          |                          | 7.7.0+dfsg-1ubuntu1.1    | A flawed logical condition in           |
+|                           |                  |          |                          |                          | lib/gssapi/spnego/accept_sec_context.c  |
+|                           |                  |          |                          |                          | allows a malicious                      |
+|                           |                  |          |                          |                          | actor to remotely...                    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3116    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-3437    |          |                          | 7.7.0+dfsg-1ubuntu1.3    | samba: heap buffer overflow             |
+|                           |                  |          |                          |                          | in GSSAPI unwrap_des() and              |
+|                           |                  |          |                          |                          | unwrap_des3() routines of Heimdal...    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3437    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-41916   |          |                          | 7.7.0+dfsg-1ubuntu1.2    | Heimdal is an implementation            |
+|                           |                  |          |                          |                          | of ASN.1/DER, PKIX, and                 |
+|                           |                  |          |                          |                          | Kerberos. Versions prior to...          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-41916   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-42898   |          |                          | 7.7.0+dfsg-1ubuntu1.3    | krb5: integer overflow                  |
+|                           |                  |          |                          |                          | vulnerabilities in PAC parsing          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-42898   |
++                           +------------------+          +                          +                          +-----------------------------------------+
+|                           | CVE-2022-44640   |          |                          |                          | Heimdal before 7.7.1 allows             |
+|                           |                  |          |                          |                          | remote attackers to execute             |
+|                           |                  |          |                          |                          | arbitrary code because of...            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-44640   |
++                           +------------------+----------+                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-3671    | LOW      |                          | 7.7.0+dfsg-1ubuntu1.1    | samba: Null pointer dereference         |
+|                           |                  |          |                          |                          | on missing sname in TGS-REQ             |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-3671    |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| libsqlite3-0              | CVE-2020-35525   | MEDIUM   | 3.31.1-4ubuntu0.3        | 3.31.1-4ubuntu0.4        | sqlite: Null pointer                    |
+|                           |                  |          |                          |                          | derreference in src/select.c            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2020-35525   |
++                           +------------------+          +                          +                          +-----------------------------------------+
+|                           | CVE-2020-35527   |          |                          |                          | sqlite: Out of bounds                   |
+|                           |                  |          |                          |                          | access during table rename              |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2020-35527   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-35737   |          |                          | 3.31.1-4ubuntu0.5        | sqlite: an array-bounds overflow if     |
+|                           |                  |          |                          |                          | billions of bytes are used in a...      |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-35737   |
++---------------------------+------------------+          +--------------------------+--------------------------+-----------------------------------------+
+| libss2                    | CVE-2022-1304    |          | 1.45.5-2ubuntu1          | 1.45.5-2ubuntu1.1        | e2fsprogs: out-of-bounds                |
+|                           |                  |          |                          |                          | read/write via crafted filesystem       |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-1304    |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| libssl1.1                 | CVE-2023-0286    | HIGH     | 1.1.1f-1ubuntu2.13       | 1.1.1f-1ubuntu2.17       | X.400 address type confusion            |
+|                           |                  |          |                          |                          | in X.509 GeneralName                    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2023-0286    |
++                           +------------------+----------+                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-2068    | MEDIUM   |                          | 1.1.1f-1ubuntu2.15       | openssl: the c_rehash script            |
+|                           |                  |          |                          |                          | allows command injection                |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-2068    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-2097    |          |                          | 1.1.1f-1ubuntu2.16       | openssl: AES OCB fails                  |
+|                           |                  |          |                          |                          | to encrypt some bytes                   |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-2097    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-4304    |          |                          | 1.1.1f-1ubuntu2.17       | Timing Oracle in RSA Decryption         |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-4304    |
++                           +------------------+          +                          +                          +-----------------------------------------+
+|                           | CVE-2022-4450    |          |                          |                          | Double free after                       |
+|                           |                  |          |                          |                          | calling PEM_read_bio_ex                 |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-4450    |
++                           +------------------+          +                          +                          +-----------------------------------------+
+|                           | CVE-2023-0215    |          |                          |                          | Use-after-free                          |
+|                           |                  |          |                          |                          | following BIO_new_NDEF                  |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2023-0215    |
++---------------------------+------------------+          +--------------------------+--------------------------+-----------------------------------------+
+| libsystemd0               | CVE-2022-3821    |          | 245.4-4ubuntu3.17        |                          | systemd: buffer overrun in              |
+|                           |                  |          |                          |                          | format_timespan() function              |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3821    |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| libtinfo6                 | CVE-2021-39537   | LOW      | 6.2-0ubuntu2             |                          | ncurses: heap-based buffer overflow     |
+|                           |                  |          |                          |                          | in _nc_captoinfo() in captoinfo.c       |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-39537   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-29458   |          |                          |                          | ncurses: segfaulting OOB read           |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-29458   |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| libudev1                  | CVE-2022-3821    | MEDIUM   | 245.4-4ubuntu3.17        |                          | systemd: buffer overrun in              |
+|                           |                  |          |                          |                          | format_timespan() function              |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3821    |
++---------------------------+------------------+          +--------------------------+--------------------------+-----------------------------------------+
+| libwind0-heimdal          | CVE-2021-44758   |          | 7.7.0+dfsg-1ubuntu1      | 7.7.0+dfsg-1ubuntu1.3    | Heimdal before 7.7.1 allows             |
+|                           |                  |          |                          |                          | attackers to cause a NULL               |
+|                           |                  |          |                          |                          | pointer dereference in...               |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-44758   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-3116    |          |                          | 7.7.0+dfsg-1ubuntu1.1    | A flawed logical condition in           |
+|                           |                  |          |                          |                          | lib/gssapi/spnego/accept_sec_context.c  |
+|                           |                  |          |                          |                          | allows a malicious                      |
+|                           |                  |          |                          |                          | actor to remotely...                    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3116    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-3437    |          |                          | 7.7.0+dfsg-1ubuntu1.3    | samba: heap buffer overflow             |
+|                           |                  |          |                          |                          | in GSSAPI unwrap_des() and              |
+|                           |                  |          |                          |                          | unwrap_des3() routines of Heimdal...    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-3437    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-41916   |          |                          | 7.7.0+dfsg-1ubuntu1.2    | Heimdal is an implementation            |
+|                           |                  |          |                          |                          | of ASN.1/DER, PKIX, and                 |
+|                           |                  |          |                          |                          | Kerberos. Versions prior to...          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-41916   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-42898   |          |                          | 7.7.0+dfsg-1ubuntu1.3    | krb5: integer overflow                  |
+|                           |                  |          |                          |                          | vulnerabilities in PAC parsing          |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-42898   |
++                           +------------------+          +                          +                          +-----------------------------------------+
+|                           | CVE-2022-44640   |          |                          |                          | Heimdal before 7.7.1 allows             |
+|                           |                  |          |                          |                          | remote attackers to execute             |
+|                           |                  |          |                          |                          | arbitrary code because of...            |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-44640   |
++                           +------------------+----------+                          +--------------------------+-----------------------------------------+
+|                           | CVE-2021-3671    | LOW      |                          | 7.7.0+dfsg-1ubuntu1.1    | samba: Null pointer dereference         |
+|                           |                  |          |                          |                          | on missing sname in TGS-REQ             |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-3671    |
++---------------------------+------------------+          +--------------------------+--------------------------+-----------------------------------------+
+| locales                   | CVE-2016-20013   |          | 2.31-0ubuntu9.9          |                          | sha256crypt and sha512crypt             |
+|                           |                  |          |                          |                          | through 0.6 allow attackers             |
+|                           |                  |          |                          |                          | to cause a denial of...                 |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2016-20013   |
++---------------------------+------------------+          +--------------------------+--------------------------+-----------------------------------------+
+| login                     | CVE-2013-4235    |          | 1:4.8.1-1ubuntu5.20.04.2 |                          | shadow-utils: TOCTOU race               |
+|                           |                  |          |                          |                          | conditions by copying and               |
+|                           |                  |          |                          |                          | removing directory trees                |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2013-4235    |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| logsave                   | CVE-2022-1304    | MEDIUM   | 1.45.5-2ubuntu1          | 1.45.5-2ubuntu1.1        | e2fsprogs: out-of-bounds                |
+|                           |                  |          |                          |                          | read/write via crafted filesystem       |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-1304    |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| ncurses-base              | CVE-2021-39537   | LOW      | 6.2-0ubuntu2             |                          | ncurses: heap-based buffer overflow     |
+|                           |                  |          |                          |                          | in _nc_captoinfo() in captoinfo.c       |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-39537   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-29458   |          |                          |                          | ncurses: segfaulting OOB read           |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-29458   |
++---------------------------+------------------+          +                          +--------------------------+-----------------------------------------+
+| ncurses-bin               | CVE-2021-39537   |          |                          |                          | ncurses: heap-based buffer overflow     |
+|                           |                  |          |                          |                          | in _nc_captoinfo() in captoinfo.c       |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2021-39537   |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-29458   |          |                          |                          | ncurses: segfaulting OOB read           |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-29458   |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| openssl                   | CVE-2023-0286    | HIGH     | 1.1.1f-1ubuntu2.13       | 1.1.1f-1ubuntu2.17       | X.400 address type confusion            |
+|                           |                  |          |                          |                          | in X.509 GeneralName                    |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2023-0286    |
++                           +------------------+----------+                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-2068    | MEDIUM   |                          | 1.1.1f-1ubuntu2.15       | openssl: the c_rehash script            |
+|                           |                  |          |                          |                          | allows command injection                |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-2068    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-2097    |          |                          | 1.1.1f-1ubuntu2.16       | openssl: AES OCB fails                  |
+|                           |                  |          |                          |                          | to encrypt some bytes                   |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-2097    |
++                           +------------------+          +                          +--------------------------+-----------------------------------------+
+|                           | CVE-2022-4304    |          |                          | 1.1.1f-1ubuntu2.17       | Timing Oracle in RSA Decryption         |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-4304    |
++                           +------------------+          +                          +                          +-----------------------------------------+
+|                           | CVE-2022-4450    |          |                          |                          | Double free after                       |
+|                           |                  |          |                          |                          | calling PEM_read_bio_ex                 |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-4450    |
++                           +------------------+          +                          +                          +-----------------------------------------+
+|                           | CVE-2023-0215    |          |                          |                          | Use-after-free                          |
+|                           |                  |          |                          |                          | following BIO_new_NDEF                  |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2023-0215    |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| passwd                    | CVE-2013-4235    | LOW      | 1:4.8.1-1ubuntu5.20.04.2 |                          | shadow-utils: TOCTOU race               |
+|                           |                  |          |                          |                          | conditions by copying and               |
+|                           |                  |          |                          |                          | removing directory trees                |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2013-4235    |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+| perl-base                 | CVE-2020-16156   | MEDIUM   | 5.30.0-9ubuntu0.2        | 5.30.0-9ubuntu0.3        | perl-CPAN: Bypass of verification       |
+|                           |                  |          |                          |                          | of signatures in CHECKSUMS files        |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2020-16156   |
++---------------------------+------------------+          +--------------------------+--------------------------+-----------------------------------------+
+| zlib1g                    | CVE-2022-37434   |          | 1:1.2.11.dfsg-2ubuntu1.3 | 1:1.2.11.dfsg-2ubuntu1.5 | zlib: heap-based buffer                 |
+|                           |                  |          |                          |                          | over-read and overflow in               |
+|                           |                  |          |                          |                          | inflate() in inflate.c via a...         |
+|                           |                  |          |                          |                          | -->avd.aquasec.com/nvd/cve-2022-37434   |
++---------------------------+------------------+----------+--------------------------+--------------------------+-----------------------------------------+
+
+home/webgoat/webgoat-2023.5-SNAPSHOT.jar
+========================================
+Total: 39 (UNKNOWN: 0, LOW: 1, MEDIUM: 2, HIGH: 26, CRITICAL: 10)
+
++----------------------------------+---------------------+----------+-------------------+---------------+-----------------------------------------------------------+
+|             LIBRARY              |  VULNERABILITY ID   | SEVERITY | INSTALLED VERSION | FIXED VERSION |                           TITLE                           |
++----------------------------------+---------------------+----------+-------------------+---------------+-----------------------------------------------------------+
+| com.thoughtworks.xstream:xstream | CVE-2013-7285       | CRITICAL | 1.4.5             | 1.4.6         | XStream: remote code execution due                        |
+|                                  |                     |          |                   |               | to insecure XML deserialization                           |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2013-7285                      |
++                                  +---------------------+          +                   +---------------+-----------------------------------------------------------+
+|                                  | CVE-2019-10173      |          |                   | 1.4.11        | xstream: remote code                                      |
+|                                  |                     |          |                   |               | execution due to insecure XML                             |
+|                                  |                     |          |                   |               | deserialization (regression of ...                        |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2019-10173                     |
++                                  +---------------------+          +                   +---------------+-----------------------------------------------------------+
+|                                  | CVE-2021-21342      |          |                   | 1.4.16        | XStream: SSRF via                                         |
+|                                  |                     |          |                   |               | crafted input stream                                      |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-21342                     |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-21344      |          |                   |               | XStream: Unsafe deserizaliation                           |
+|                                  |                     |          |                   |               | of javax.sql.rowset.BaseRowSet                            |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-21344                     |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-21345      |          |                   |               | XStream: Unsafe deserizaliation of                        |
+|                                  |                     |          |                   |               | com.sun.corba.se.impl.activation.ServerTableEntry         |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-21345                     |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-21346      |          |                   |               | XStream: Unsafe deserizaliation                           |
+|                                  |                     |          |                   |               | of sun.swing.SwingLazyValue                               |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-21346                     |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-21347      |          |                   |               | XStream: Unsafe deserizaliation of                        |
+|                                  |                     |          |                   |               | com.sun.tools.javac.processing.JavacProcessingEnvironment |
+|                                  |                     |          |                   |               | NameProcessIterator -->avd.aquasec.com/nvd/cve-2021-21347 |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-21350      |          |                   |               | XStream: Unsafe deserizaliation of                        |
+|                                  |                     |          |                   |               | com.sun.org.apache.bcel.internal.util.ClassLoader         |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-21350                     |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-21351      |          |                   |               | XStream: allow a remote                                   |
+|                                  |                     |          |                   |               | attacker to load and execute                              |
+|                                  |                     |          |                   |               | arbitrary code from...                                    |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-21351                     |
++                                  +---------------------+----------+                   +---------------+-----------------------------------------------------------+
+|                                  | CVE-2016-3674       | HIGH     |                   | 1.4.9         | XStream: enabled processing                               |
+|                                  |                     |          |                   |               | of external entities                                      |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2016-3674                      |
++                                  +---------------------+          +                   +---------------+-----------------------------------------------------------+
+|                                  | CVE-2017-7957       |          |                   | 1.4.10        | XStream: DoS when                                         |
+|                                  |                     |          |                   |               | unmarshalling void type                                   |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2017-7957                      |
++                                  +---------------------+          +                   +---------------+-----------------------------------------------------------+
+|                                  | CVE-2020-26217      |          |                   | 1.4.14-jdk7   | XStream: remote code                                      |
+|                                  |                     |          |                   |               | execution due to insecure XML                             |
+|                                  |                     |          |                   |               | deserialization when relying on...                        |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2020-26217                     |
++                                  +---------------------+          +                   +---------------+-----------------------------------------------------------+
+|                                  | CVE-2020-26258      |          |                   | 1.4.15        | XStream: Server-Side Forgery                              |
+|                                  |                     |          |                   |               | Request vulnerability can be                              |
+|                                  |                     |          |                   |               | activated when unmarshalling                              |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2020-26258                     |
++                                  +---------------------+          +                   +---------------+-----------------------------------------------------------+
+|                                  | CVE-2021-21341      |          |                   | 1.4.16        | XStream: allow a remote attacker to                       |
+|                                  |                     |          |                   |               | cause DoS only by manipulating the...                     |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-21341                     |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-21343      |          |                   |               | XStream: arbitrary file                                   |
+|                                  |                     |          |                   |               | deletion on the local host                                |
+|                                  |                     |          |                   |               | via crafted input stream...                               |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-21343                     |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-21348      |          |                   |               | XStream: ReDoS vulnerability                              |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-21348                     |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-21349      |          |                   |               | XStream: SSRF can be activated                            |
+|                                  |                     |          |                   |               | unmarshalling with XStream                                |
+|                                  |                     |          |                   |               | to access data streams...                                 |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-21349                     |
++                                  +---------------------+          +                   +---------------+-----------------------------------------------------------+
+|                                  | CVE-2021-29505      |          |                   | 1.4.17        | XStream: remote command                                   |
+|                                  |                     |          |                   |               | execution attack by manipulating                          |
+|                                  |                     |          |                   |               | the processed input stream                                |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-29505                     |
++                                  +---------------------+          +                   +---------------+-----------------------------------------------------------+
+|                                  | CVE-2021-39139      |          |                   | 1.4.18        | xstream: Arbitrary code execution                         |
+|                                  |                     |          |                   |               | via unsafe deserialization of                             |
+|                                  |                     |          |                   |               | Xalan xsltc.trax.TemplatesImpl                            |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-39139                     |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-39141      |          |                   |               | xstream: Arbitrary code execution                         |
+|                                  |                     |          |                   |               | via unsafe deserialization of                             |
+|                                  |                     |          |                   |               | com.sun.xml.internal.ws.client.sei.*                      |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-39141                     |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-39144      |          |                   |               | xstream: Arbitrary code                                   |
+|                                  |                     |          |                   |               | execution via unsafe                                      |
+|                                  |                     |          |                   |               | deserialization of sun.tracing.*                          |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-39144                     |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-39145      |          |                   |               | xstream: Arbitrary code execution                         |
+|                                  |                     |          |                   |               | via unsafe deserialization of                             |
+|                                  |                     |          |                   |               | com.sun.jndi.ldap.LdapBindingEnumeration                  |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-39145                     |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-39146      |          |                   |               | xstream: Arbitrary code execution                         |
+|                                  |                     |          |                   |               | via unsafe deserialization of                             |
+|                                  |                     |          |                   |               | javax.swing.UIDefaults$ProxyLazyValue                     |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-39146                     |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-39147      |          |                   |               | xstream: Arbitrary code execution                         |
+|                                  |                     |          |                   |               | via unsafe deserialization of                             |
+|                                  |                     |          |                   |               | com.sun.jndi.ldap.LdapSearchEnumeration                   |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-39147                     |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-39148      |          |                   |               | xstream: Arbitrary code execution                         |
+|                                  |                     |          |                   |               | via unsafe deserialization of                             |
+|                                  |                     |          |                   |               | com.sun.jndi.toolkit.dir.ContextEnumerator                |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-39148                     |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-39149      |          |                   |               | xstream: Arbitrary code                                   |
+|                                  |                     |          |                   |               | execution via unsafe                                      |
+|                                  |                     |          |                   |               | deserialization of com.sun.corba.*                        |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-39149                     |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-39150      |          |                   |               | xstream: Server-side request forgery                      |
+|                                  |                     |          |                   |               | (SSRF) via unsafe deserialization of                      |
+|                                  |                     |          |                   |               | com.sun.xml.internal.ws.client.sei.*                      |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-39150                     |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-39151      |          |                   |               | xstream: Arbitrary code execution                         |
+|                                  |                     |          |                   |               | via unsafe deserialization of                             |
+|                                  |                     |          |                   |               | com.sun.jndi.ldap.LdapBindingEnumeration                  |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-39151                     |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-39152      |          |                   |               | xstream: Server-side request forgery                      |
+|                                  |                     |          |                   |               | (SSRF) via unsafe deserialization of                      |
+|                                  |                     |          |                   |               | jdk.nashorn.internal.runtime.Source$URLData               |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-39152                     |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-39153      |          |                   |               | xstream: Arbitrary code execution                         |
+|                                  |                     |          |                   |               | via unsafe deserialization of                             |
+|                                  |                     |          |                   |               | Xalan xsltc.trax.TemplatesImpl                            |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-39153                     |
++                                  +---------------------+          +                   +               +-----------------------------------------------------------+
+|                                  | CVE-2021-39154      |          |                   |               | xstream: Arbitrary code execution                         |
+|                                  |                     |          |                   |               | via unsafe deserialization of                             |
+|                                  |                     |          |                   |               | javax.swing.UIDefaults$ProxyLazyValue                     |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-39154                     |
++                                  +---------------------+          +                   +---------------+-----------------------------------------------------------+
+|                                  | CVE-2021-43859      |          |                   | 1.4.19        | xstream: Injecting highly recursive                       |
+|                                  |                     |          |                   |               | collections or maps can cause a DoS                       |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-43859                     |
++                                  +---------------------+          +                   +---------------+-----------------------------------------------------------+
+|                                  | CVE-2022-40151      |          |                   | 1.4.20        | xstream: Xstream to serialise                             |
+|                                  |                     |          |                   |               | XML data was vulnerable                                   |
+|                                  |                     |          |                   |               | to Denial of Service...                                   |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2022-40151                     |
++                                  +---------------------+          +                   +---------------+-----------------------------------------------------------+
+|                                  | CVE-2022-40152      |          |                   |               | woodstox-core: woodstox to                                |
+|                                  |                     |          |                   |               | serialise XML data was vulnerable                         |
+|                                  |                     |          |                   |               | to Denial of Service...                                   |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2022-40152                     |
++                                  +---------------------+          +                   +---------------+-----------------------------------------------------------+
+|                                  | CVE-2022-41966      |          |                   | 1.4.20        | XStream can cause Denial of                               |
+|                                  |                     |          |                   |               | Service via stack overflow                                |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2022-41966                     |
++                                  +---------------------+----------+                   +---------------+-----------------------------------------------------------+
+|                                  | CVE-2020-26259      | MEDIUM   |                   | 1.4.15        | XStream: arbitrary file deletion on                       |
+|                                  |                     |          |                   |               | the local host when unmarshalling                         |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2020-26259                     |
++                                  +---------------------+          +                   +---------------+-----------------------------------------------------------+
+|                                  | CVE-2021-39140      |          |                   | 1.4.18        | xstream: Infinite loop DoS                                |
+|                                  |                     |          |                   |               | via unsafe deserialization of                             |
+|                                  |                     |          |                   |               | sun.reflect.annotation.AnnotationInvocationHandler        |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-39140                     |
++                                  +---------------------+----------+                   +---------------+-----------------------------------------------------------+
+|                                  | GHSA-3mq5-fq9h-gj7j | LOW      |                   |               | Denial of Service due to parser crash                     |
+|                                  |                     |          |                   |               | -->github.com/advisories/GHSA-3mq5-fq9h-gj7j              |
++----------------------------------+---------------------+----------+-------------------+---------------+-----------------------------------------------------------+
+| org.yaml:snakeyaml               | CVE-2022-1471       | CRITICAL |              1.33 |               | SnakeYaml: Constructor                                    |
+|                                  |                     |          |                   |               | Deserialization                                           |
+|                                  |                     |          |                   |               | Remote Code Execution                                     |
+|                                  |                     |          |                   |               | -->avd.aquasec.com/nvd/cve-2022-1471                      |
++----------------------------------+---------------------+----------+-------------------+---------------+-----------------------------------------------------------+
