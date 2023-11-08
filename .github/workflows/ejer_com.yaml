@@ -1,39 +1,54 @@
-name: GOAT Compile
+name: Reportes
+ 
 on:
   push:
-    branches:
-      - main
+      branches:
+       - main
+ 
 jobs:
-  integration:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      security-events: write
-      actions: read
-      contents: read
     steps:
-      - name: "Obteniendo ultima version del codigo"
+      - name: "Obteniendo ultima versio del codigo"
         uses: actions/checkout@v3
-      - name: "Instalacion Java"
+ 
+      - name: "Instalacion de Java"
         uses: actions/setup-java@v3
         with:
           distribution: "temurin"
           java-version: "17"
-
+ 
+      - name: "Compilacion"    
+        run: ./mvnw clean install
+ 
+      - name: "Verificar paquete"
+        run: ls -ltra target
+ 
+  sca:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Obteniendo version"
+        uses: actions/checkout@v2
+ 
+      - name: "Instalacion de Java"
+        uses: actions/setup-java@v3
+        with:
+          distribution: "temurin"
+          java-version: "17"
+ 
       - name: "Instalar python"
         uses: actions/setup-python@v4
         with:
           python-version: 3.8
-
+ 
       - name: "Actualizar dep de python"
         run: |
               pip3 install requests
-
-      - name: "Compilacion"
+              
+      - name: "Compilacion 2"
         run: ./mvnw clean install
-      - name: "Verificar paquete"
-        run: ls -ltra target
-
-      - name: "Dependency Check"
+ 
+      - name: "Dependency-check"
         uses: dependency-check/Dependency-Check_Action@main
         env:
           JAVA_HOME: /opt/jdk
@@ -42,65 +57,64 @@ jobs:
           project: 'WebGoat'
           path: '.'
           format: 'XML'
-          out: 'reports'
+          out: 'reportsDC'
+ 
       - name: "Verificar reporte"
-        run: ls -ltra reports
-
-      - name: "Subir XML"
-        # uses: github/codeql-action/upload-sarif@v2        
-        with:        
-          xml_file: ${{github.workspace}}/reports
-          checkout_path: ${{github.workspace}}/reports
-
+        run: ls -ltra reportsDC
+ 
       - name: "Subir Dep-Check scan a DefectDojo"
         run: |
-              python3 prueba.py --file reports/dependency-check-report.xml --type-scan 'Dependency Check Scan'
-
+              python3 prueba.py --file reportsDC/dependency-check-report.xml --type-scan 'Dependency Check Scan'
  
-      - name: "Horusec"
-        run: curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | bash -s latest-beta
-      - name: Contenedor Docker
-        run: |
-          docker build -t prueba .
-          docker images
-          docker run --name webgoat -d -p 127.0.0.1:8080:8080 -p 127.0.0.1:9090:9090 prueba
-          docker ps -a
+      - name: "Crear imagen de Docker"
+        run: docker build -t webgoat ./
  
-      - name: Acuasecurity
-        run: |
-          wget https://github.com/aquasecurity/trivy/releases/download/v0.18.3/trivy_0.18.3_Linux-64bit.deb
-          sudo dpkg -i trivy_0.18.3_Linux-64bit.deb
-        # trivy image prueba
+      - name: "Verificar imagen"
+        run: docker images
  
-      - name: Escaneo de Vulnerabilidades con Trivy
+      - name: "Ejecutar trivy"
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: 'prueba'
-          timeout: 10m0s
-          exit-code: '1'
-          severity: 'CRITICAL,HIGH'
-          scanners: vuln,secret,config
+          image-ref: 'webgoat'
           format: 'json'
           output: 'trivy-results.json'
-        continue-on-error: true
-
-      - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-          sarif_file: 'trivy-results.json'
-          category: 'code'
-
+          ignore-unfixed: false
+          timeout: 15m0s
+ 
       - name: "Subir Trivy scan a DefectDojo"
         run: |
-              python3 prueba.py --file trivy-results.json --type-scan 'Trivy Scan' 
+              python3 prueba.py --file trivy-results.json --type-scan 'Trivy Scan'
  
-      # - name: Arachni
-      #   run: |
-      #     wget https://github.com/Arachni/arachni/releases/download/v1.6.1.3/arachni-1.6.1.3-0.6.1.1-linux-x86_64.tar.gz
-      #     tar -xvf arachni-1.6.1.3-0.6.1.1-linux-x86_64.tar.gz
-      #     docker inspect webgoat | grep "IPAddress" | xargs | cut -d ',' -f 2 | awk '{print $2}' > ip
-      #     ./arachni-1.6.1.3-0.6.1.1/bin/arachni --check=* http://ip:8080/WebGoat/login
-      - name: Parando y eliminando contenedor
+      - name: "Crear contenedor"
+        run: docker run -d -p 8080:8080 --name container-prueba webgoat
+ 
+      - name: "Verificar contenedor"
+        run: docker ps -a
+ 
+      - name: "Descargar arachni"
         run: |
-          docker container stop webgoat
-          docker container rm webgoat
+              wget https://github.com/Arachni/arachni/releases/download/v1.6.1.3/arachni-1.6.1.3-0.6.1.1-linux-x86_64.tar.gz
+              tar -xvf arachni-1.6.1.3-0.6.1.1-linux-x86_64.tar.gz
+ 
+      - name: "Ejecutar arachni"
+        run: |
+              var_IP=$(docker inspect container-prueba | grep "IPAddress" | tail -1 | cut -d '"' -f 4)
+              ./arachni-1.6.1.3-0.6.1.1/bin/arachni --check=* http://$var_IP:8080/WebGoat/login
+ 
+  horusec:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Obteniendo ultima versio del codigo"
+        uses: actions/checkout@v3
+ 
+      - name: "Instalacion de Java"
+        uses: actions/setup-java@v3
+        with:
+          distribution: "temurin"
+          java-version: "17"
+ 
+      - name: "Ejecucion de horusec"
+        id: run_horusec
+        uses: fike/horusec-action@main
+        with:
+          arguments: -p="./" --return-error -e="false"
