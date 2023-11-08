@@ -1,7 +1,7 @@
 name: Reportes
 
 env: 
-  mi_secret: ${{ secret.DANIEL_SECRET }}}
+  mi_secret: ${{ secrets.DANIEL_SECRET }}}
 
 on:
   push:
