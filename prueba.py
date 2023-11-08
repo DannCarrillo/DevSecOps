@@ -2,12 +2,12 @@ import requests
 import json
 import argparse
 import os
-import base64
 
-MI_SECRET = os.environ["mi_secret"]
+
+apy_key = os.environ["mi_secret"]
 url_api = "http://18.218.244.166:8080/api/v2/{method}"
 #api_key_cod = base64.b16encode(f"{MI_SECRET}".encode("ascii"))
-api_key = MI_SECRET
+
 
 
     
